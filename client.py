@@ -1,54 +1,67 @@
-from datetime import datetime
-from socket import socket, AF_INET, SOCK_STREAM
-from sys import argv
-import logging
-import log.client_log_config
+from time import time, ctime
+from socket import AF_INET, SOCK_STREAM, socket
+from json import loads, dumps
 
-from common.utils import check_port, receive_message, send_message, get_message
-from common.variables import DEFAULT_PORT, DEFAULT_API_ADDRESS
-from common.errors import IncorrectPort, IncorrectResponseFromServer
-
-CLIENT_LOG = logging.getLogger('client')
+from log.client_log_config import logger, log
 
 
-def gen_presence_message(account):
-    return {
-        "action": "authenticate",
-        "time": datetime.now().timestamp(),
-        "user": {
-            "account_name": f"{account}",
-            "password": "CorrectHorseBatterStaple"
-        }
-    }
-
-
-def check_response(message, expected_status):
-    if message.get('response') == expected_status:
-        return message
-    CLIENT_LOG.error(f'server response {message}')
-    raise IncorrectResponseFromServer()
-
-
-def main():
-    addr = argv[1] if len(argv) > 2 else DEFAULT_API_ADDRESS
+@log
+def validate_port(x):  # проверка на число и границы [0:65535]
     try:
-        port = check_port(argv[2]) if len(argv) > 2 else DEFAULT_PORT
-    except IncorrectPort as e:
-        CLIENT_LOG.error(str(e))
-        raise e
+        if 0 < int(x) < 2 ** 16:
+            return True
+        else:
+            raise ValueError
+    except ValueError:
+        logger.error("Wrong <port>: should be a number between 0 and 65535")
+        return False
 
-    socket_client = socket(family=AF_INET, type=SOCK_STREAM)
+
+@log
+def validate_addr(x):  # проверка формата 'x.x.x.x', где x число [0:255] или localhost
     try:
-        socket_client.connect((addr, port))
-    except ConnectionRefusedError:
-        CLIENT_LOG.error('не удалось подключиться')
-        raise
-    send_message(socket_client, gen_presence_message('Vasya'))
-    message = receive_message(socket_client)
-    CLIENT_LOG.info(get_message(message))
-    check_response(message, 200)
-    socket_client.close()
+        if x == 'localhost':
+            return True
+        val = [n for n in map(int, x.split('.')) if 0 <= n < 256]
+        if len(val) == 4:
+            return True
+        else:
+            raise ValueError
+    except (ValueError, AttributeError):
+        logger.error("Wrong <host>: should be written in a form of dot-decimal notation (each number < 256)")
+        return False
 
 
-if __name__ == '__main__':
-    main()
+@log
+def jim_presence(account_name="guest"):
+    return dict(
+        action="presence", time=ctime(time()), type="status", user=dict(account_name=account_name, status="online")
+    )
+
+
+@log
+def jim_exit_server():  # команда на завершение работы сервера
+    return dict(action="exit")
+
+
+def socket_client(jim, host="localhost", port=7890):
+    if not all((validate_addr(host), validate_port(port))):
+        logger.error(f"Fatal Error: wrong socket")
+        exit(3)
+    with socket(AF_INET, SOCK_STREAM) as client_sock:
+        try:
+            client_sock.connect((host, port))
+            message = jim()  # Формируем <presence> сообщение
+            logger.debug(f"Client sends:\n{dumps(message, indent=4, sort_keys=True)}")
+            client_sock.send(dumps(message).encode("ascii"))  # Отправляем <presence> сообщение на сервер
+            answer = loads(client_sock.recv(1000).decode("ascii"))  # Получаем ответ
+            logger.debug(f"Client received:\n{dumps(answer, indent=4, sort_keys=True)}")
+        except ConnectionRefusedError as e:
+            logger.error(f"Fatal Error: {e}")
+            exit(4)
+    return answer
+
+
+if __name__ == "__main__":
+    socket_client(jim_presence)
+    socket_client(jim_exit_server)

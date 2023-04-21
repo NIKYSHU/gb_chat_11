@@ -1,62 +1,35 @@
-import sys
-from socket import socket, AF_INET, SOCK_STREAM
-from sys import argv
-
-from common.utils import check_port, receive_message, send_message, get_message
-from common.variables import DEFAULT_API_ADDRESS, DEFAULT_PORT
-
-import logging
-import log.server_log_config
-from common.errors import IncorrectPort
-
-SERVER_LOG = logging.getLogger('server')
+import socket
+from json import loads, dumps
+from log.server_log_config import logger, log
 
 
-def gen_response(message):
-    return {
-        "response": 200,
-        "alert": ""
-    }
+@log
+def response_presence(message):
+    if message.get("action", "") == "presence" and "time" in message and "user" in message:
+        return dict(response=200)  # OK
+    return dict(response=400)
 
 
-def main():
-    addr = DEFAULT_API_ADDRESS
-    port = DEFAULT_PORT
-    if '-a' in argv:
-        try:
-            addr = argv[argv.index('-a') + 1]
-        except IndexError:
-            SERVER_LOG.error('после аргумента -a должен быть ip-адресс')
-            raise ValueError('после аргумента -a должен быть ip-адресс')
-    if '-p' in argv:
-        try:
-            port = check_port(argv[argv.index('-p') + 1])
-        except IndexError:
-            SERVER_LOG.error('после аргумента -p должен быть номер порта')
-            raise ValueError('после аргумента -p должен быть номер порта')
-        except IncorrectPort as e:
-            SERVER_LOG.error(str(e))
-            raise e
+def socket_server(host="0.0.0.0", port=7890):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_sock:
+        server_sock.bind((host, port))
+        logger.debug(f"Running socket server on {host}:{port}")
+        server_sock.listen(5)
 
-    socket_server = socket(family=AF_INET, type=SOCK_STREAM)
-    try:
-        socket_server.bind((addr, port))
-    except OSError as e:
-        SERVER_LOG.error(str(e))
-        raise e
-
-    socket_server.listen()
-    while True:
-        try:
-            socket_client, address_client = socket_server.accept()
-            SERVER_LOG.debug(f'подключение от {address_client}')
-            message = receive_message(socket_client)
-            SERVER_LOG.info(get_message(message))
-            send_message(socket_client, gen_response(message))
-        except(KeyboardInterrupt, OSError):
-            socket_server.close()
-            sys.exit()
+        while True:
+            client, addr = server_sock.accept()
+            with client:
+                message = loads(client.recv(1000).decode("ascii"))  # Форм.JSON из принятого сообщения (1000:р-р буфера)
+                logger.debug(f"Server received:\n{dumps(message, indent=4, sort_keys=True)}")
+                if message.get("action", "") == "exit":
+                    answer = dict(response=200)
+                    logger.debug(f"Server sends:\n{dumps(answer, indent=4, sort_keys=True)}")
+                    client.send(dumps(answer).encode("ascii"))
+                    break
+                answer = response_presence(message)  # валидация и формирование JSON ответа
+                logger.debug(f"Server sends:\n{dumps(answer, indent=4, sort_keys=True)}")
+                client.send(dumps(answer).encode("ascii"))  # Преобразование JSON в Bytes и отправка ответа
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    socket_server()
