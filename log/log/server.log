@@ -1,0 +1,33 @@
+2023-03-05 14:50:00,322 INFO server.py Сервер запущен. порт: 7777
+2023-03-05 14:50:08,984 INFO server.py соединение установлено c ('127.0.0.1', 50771)
+2023-03-05 14:50:08,984 DEBUG server.py Попытка получения сообщения: <socket.socket fd=368, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50771)>
+2023-03-05 14:50:08,984 INFO server.py Принято сообщение клиента {'action': 'presence', 'time': 1678017008.9843142, 'user': {'account_name': 'user'}}
+2023-03-05 14:50:08,984 DEBUG server.py Получено сообщение {'action': 'presence', 'time': 1678017008.9843142, 'user': {'account_name': 'user'}}
+2023-03-05 14:50:08,984 DEBUG server.py Проверка сообщения от клиента: {'action': 'presence', 'time': 1678017008.9843142, 'user': {'account_name': 'user'}}
+2023-03-05 14:50:08,984 INFO server.py Сформирован ответ {'response': 200}
+2023-03-05 14:50:08,984 DEBUG server.py Отправка сообщения {'response': 200} клиенту <socket.socket fd=368, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50771)>
+2023-03-05 14:50:08,984 DEBUG server.py Соединение с клиентом ('127.0.0.1', 50771) закрывается
+2023-03-05 15:07:03,835 INFO server.py Сервер запущен. порт: 7777
+2023-03-05 15:07:09,888 INFO server.py соединение установлено c ('127.0.0.1', 50893)
+2023-03-05 15:07:09,888 DEBUG server.py Попытка получения сообщения: <socket.socket fd=452, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50893)>
+2023-03-05 15:07:09,888 INFO server.py Принято сообщение клиента {'action': 'presence', 'time': 1678018029.8885942, 'user': {'account_name': 'user'}}
+2023-03-05 15:07:09,904 DEBUG decor.py Функция get_msg c параметрами (<socket.socket fd=452, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50893)>,), {}. Вызов из модуля __main__.Вызов из функции main().Вызов из функции main
+2023-03-05 15:07:09,904 DEBUG server.py Получено сообщение {'action': 'presence', 'time': 1678018029.8885942, 'user': {'account_name': 'user'}}
+2023-03-05 15:07:09,904 DEBUG server.py Проверка сообщения от клиента: {'action': 'presence', 'time': 1678018029.8885942, 'user': {'account_name': 'user'}}
+2023-03-05 15:07:09,904 DEBUG decor.py Функция make_answer c параметрами ({'action': 'presence', 'time': 1678018029.8885942, 'user': {'account_name': 'user'}},), {}. Вызов из модуля __main__.Вызов из функции main().Вызов из функции main
+2023-03-05 15:07:09,904 INFO server.py Сформирован ответ {'response': 200}
+2023-03-05 15:07:09,904 DEBUG server.py Отправка сообщения {'response': 200} клиенту <socket.socket fd=452, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50893)>
+2023-03-05 15:07:09,904 DEBUG decor.py Функция send_msg c параметрами (<socket.socket fd=452, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50893)>, {'response': 200}), {}. Вызов из модуля __main__.Вызов из функции main().Вызов из функции main
+2023-03-05 15:07:09,904 DEBUG server.py Соединение с клиентом ('127.0.0.1', 50893) закрывается
+2023-03-05 15:09:29,461 INFO server.py Сервер запущен. порт: 7777
+2023-03-05 15:09:37,368 INFO server.py соединение установлено c ('127.0.0.1', 50911)
+2023-03-05 15:09:37,368 DEBUG server.py Попытка получения сообщения: <socket.socket fd=484, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50911)>
+2023-03-05 15:09:37,384 INFO server.py Принято сообщение клиента {'action': 'presence', 'time': 1678018177.3688323, 'user': {'account_name': 'user'}}
+2023-03-05 15:09:37,400 DEBUG decor.py Функция get_msg c параметрами (<socket.socket fd=484, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50911)>,), {}. Вызов из модуля __main__.Вызов из функции main().Вызов из функции main
+2023-03-05 15:09:37,400 DEBUG server.py Получено сообщение {'action': 'presence', 'time': 1678018177.3688323, 'user': {'account_name': 'user'}}
+2023-03-05 15:09:37,400 DEBUG server.py Проверка сообщения от клиента: {'action': 'presence', 'time': 1678018177.3688323, 'user': {'account_name': 'user'}}
+2023-03-05 15:09:37,400 DEBUG decor.py Функция make_answer c параметрами ({'action': 'presence', 'time': 1678018177.3688323, 'user': {'account_name': 'user'}},), {}. Вызов из модуля __main__.Вызов из функции main().Вызов из функции main
+2023-03-05 15:09:37,400 INFO server.py Сформирован ответ {'response': 200}
+2023-03-05 15:09:37,400 DEBUG server.py Отправка сообщения {'response': 200} клиенту <socket.socket fd=484, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50911)>
+2023-03-05 15:09:37,400 DEBUG decor.py Функция send_msg c параметрами (<socket.socket fd=484, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50911)>, {'response': 200}), {}. Вызов из модуля __main__.Вызов из функции main().Вызов из функции main
+2023-03-05 15:09:37,400 DEBUG server.py Соединение с клиентом ('127.0.0.1', 50911) закрывается
