@@ -1,0 +1,28 @@
+INFO | 2023-03-08 19:07:12,625 | client.py | Client created, Account: Guest
+DEBUG | 2023-03-08 19:07:12,625 | client.py | Presence created
+DEBUG | 2023-03-08 19:07:12,625 | client.py | Called function create_presence with params ((<__main__.Client object at 0x0000021253ED44D0>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-08 19:07:12,828 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x0000021253ED44D0>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-08 19:07:12,828 | client.py | Connected. Server answer: OK
+INFO | 2023-03-08 19:07:14,445 | client.py | Message dict created: {'action': 'msg', 'time': 1678291634.4451838, 'account_name': 'Guest', 'msg txt': '123'}
+INFO | 2023-03-08 19:07:17,005 | client.py | Message dict created: {'action': 'msg', 'time': 1678291637.0050926, 'account_name': 'Guest', 'msg txt': 'exit'}
+INFO | 2023-03-08 19:07:49,814 | client.py | Client created, Account: Guest
+DEBUG | 2023-03-08 19:07:49,814 | client.py | Presence created
+DEBUG | 2023-03-08 19:07:49,814 | client.py | Called function create_presence with params ((<__main__.Client object at 0x00000134473044D0>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-08 19:07:50,024 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x00000134473044D0>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-08 19:07:50,024 | client.py | Connected. Server answer: OK
+INFO | 2023-03-08 19:08:00,202 | client.py | Client close connection
+ERROR | 2023-03-08 19:08:00,202 | client.py | Connection refused
+INFO | 2023-03-08 19:09:26,799 | client.py | Client created, Account: Guest
+DEBUG | 2023-03-08 19:09:26,799 | client.py | Presence created
+DEBUG | 2023-03-08 19:09:26,799 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000001EA8F884350>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-08 19:09:27,005 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000001EA8F884350>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-08 19:09:27,005 | client.py | Connected. Server answer: OK
+INFO | 2023-03-08 19:09:30,665 | client.py | Message dict created: {'action': 'msg', 'time': 1678291770.6650383, 'account_name': 'Guest', 'msg txt': 'wer'}
+INFO | 2023-03-08 19:09:43,640 | client.py | Client created, Account: Guest
+DEBUG | 2023-03-08 19:09:43,640 | client.py | Presence created
+DEBUG | 2023-03-08 19:09:43,640 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000002444DE14350>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-08 19:09:43,844 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000002444DE14350>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-08 19:09:43,844 | client.py | Connected. Server answer: OK
+INFO | 2023-03-08 19:09:47,580 | client.py | Message dict created: {'action': 'msg', 'time': 1678291787.580658, 'account_name': 'Guest', 'msg txt': '23'}
+INFO | 2023-03-08 19:09:47,777 | client.py | Message from Guest: 23
+DEBUG | 2023-03-08 19:09:47,777 | client.py | Called function receive_message with params ((<__main__.Client object at 0x000002444DE14350>, {'action': 'msg', 'from': 'Guest', 'time': 1678291787.7775242, 'msg txt': '23'}), {}). From module __main__. From function client.main(). 
