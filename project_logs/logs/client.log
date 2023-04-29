@@ -1,0 +1,72 @@
+INFO | 2023-03-11 12:12:14,486 | client.py | Client created, Account: yara
+DEBUG | 2023-03-11 12:12:14,486 | client.py | Presence created yara
+DEBUG | 2023-03-11 12:12:14,486 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000001DDF2E15490>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-11 12:12:14,992 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000001DDF2E15490>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-11 12:12:14,992 | client.py | Connected. Server answer: OK
+DEBUG | 2023-03-11 12:12:14,992 | client.py | Process started
+INFO | 2023-03-11 12:12:26,657 | client.py | Client created, Account: raya
+DEBUG | 2023-03-11 12:12:26,657 | client.py | Presence created raya
+DEBUG | 2023-03-11 12:12:26,657 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000001D48CB24C10>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-11 12:12:27,172 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000001D48CB24C10>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-11 12:12:27,172 | client.py | Connected. Server answer: OK
+DEBUG | 2023-03-11 12:12:27,172 | client.py | Process started
+INFO | 2023-03-11 12:13:02,676 | client.py | Message dict created: {'action': 'msg', 'from': 'raya', 'to': 'yara', 'time': 1678525982.676543, 'msg txt': 'gara'}
+INFO | 2023-03-11 12:13:02,676 | client.py | Sending message to yara
+INFO | 2023-03-11 12:13:02,754 | client.py | Message from raya: gara
+INFO | 2023-03-11 12:13:25,889 | client.py | Message dict created: {'action': 'msg', 'from': 'yara', 'to': 'pini', 'time': 1678526005.889138, 'msg txt': 'eee'}
+INFO | 2023-03-11 12:13:25,889 | client.py | Sending message to pini
+INFO | 2023-03-11 12:13:50,474 | client.py | Message dict created: {'action': 'msg', 'from': 'yara', 'to': 'raya', 'time': 1678526030.4746606, 'msg txt': '123'}
+INFO | 2023-03-11 12:13:50,474 | client.py | Sending message to raya
+INFO | 2023-03-11 12:13:50,490 | client.py | Message from yara: 123
+INFO | 2023-03-11 12:14:04,498 | client.py | Closing connection yara
+DEBUG | 2023-03-11 12:14:04,736 | threading.py | Called function receive_message with params ((<__main__.Client object at 0x000001DDF2E15490>, <socket.socket fd=352, family=2, type=1, proto=0, laddr=('127.0.0.1', 50333), raddr=('127.0.0.1', 7777)>, 'yara'), {}). From module __main__. From function self._bootstrap_inner(). 
+DEBUG | 2023-03-11 12:14:05,007 | threading.py | Called function interface with params ((<__main__.Client object at 0x000001DDF2E15490>, <socket.socket fd=352, family=2, type=1, proto=0, laddr=('127.0.0.1', 50333), raddr=('127.0.0.1', 7777)>), {}). From module __main__. From function self._bootstrap_inner(). 
+DEBUG | 2023-03-11 12:14:05,042 | client.py | Called function main with params ((<__main__.Client object at 0x000001DDF2E15490>,), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-11 12:16:27,108 | client.py | Closing connection raya
+DEBUG | 2023-03-11 12:16:27,545 | threading.py | Called function receive_message with params ((<__main__.Client object at 0x000001D48CB24C10>, <socket.socket fd=428, family=2, type=1, proto=0, laddr=('127.0.0.1', 50334), raddr=('127.0.0.1', 7777)>, 'raya'), {}). From module __main__. From function self._bootstrap_inner(). 
+DEBUG | 2023-03-11 12:16:27,617 | threading.py | Called function interface with params ((<__main__.Client object at 0x000001D48CB24C10>, <socket.socket fd=428, family=2, type=1, proto=0, laddr=('127.0.0.1', 50334), raddr=('127.0.0.1', 7777)>), {}). From module __main__. From function self._bootstrap_inner(). 
+DEBUG | 2023-03-11 12:16:28,311 | client.py | Called function main with params ((<__main__.Client object at 0x000001D48CB24C10>,), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:42:46,696 | client.py | Client created, Account: 123
+DEBUG | 2023-03-15 20:42:46,696 | client.py | Presence created 123
+DEBUG | 2023-03-15 20:42:46,696 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000001B5512BD390>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-15 20:42:47,196 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000001B5512BD390>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:42:47,196 | client.py | Connected. Server answer: OK
+DEBUG | 2023-03-15 20:42:47,196 | client.py | Process started
+INFO | 2023-03-15 20:42:51,978 | client.py | Client created, Account: 234
+DEBUG | 2023-03-15 20:42:51,978 | client.py | Presence created 234
+DEBUG | 2023-03-15 20:42:51,978 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000002AD84AEE2D0>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-15 20:42:52,488 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000002AD84AEE2D0>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:42:52,488 | client.py | Connected. Server answer: OK
+DEBUG | 2023-03-15 20:42:52,488 | client.py | Process started
+INFO | 2023-03-15 20:42:55,588 | client.py | Client created, Account: 123
+DEBUG | 2023-03-15 20:42:55,588 | client.py | Presence created 123
+DEBUG | 2023-03-15 20:42:55,588 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000001CD1671D350>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-15 20:42:56,092 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000001CD1671D350>, {'response': 400, 'error': 'BAD REQUEST'}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:42:56,092 | client.py | Connected. Server answer: 400 : BAD REQUEST
+DEBUG | 2023-03-15 20:42:56,092 | client.py | Process started
+DEBUG | 2023-03-15 20:42:56,098 | threading.py | Called function receive_message with params ((<__main__.Client object at 0x000001CD1671D350>, <socket.socket fd=372, family=2, type=1, proto=0, laddr=('127.0.0.1', 51607), raddr=('127.0.0.1', 7777)>, '123'), {}). From module __main__. From function self._bootstrap_inner(). 
+DEBUG | 2023-03-15 20:42:57,096 | client.py | Called function main with params ((<__main__.Client object at 0x000001CD1671D350>,), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:43:31,008 | client.py | Client created, Account: 123
+DEBUG | 2023-03-15 20:43:31,008 | client.py | Presence created 123
+DEBUG | 2023-03-15 20:43:31,008 | client.py | Called function create_presence with params ((<__main__.Client object at 0x0000023E43CCD390>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-15 20:43:31,514 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x0000023E43CCD390>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:43:31,514 | client.py | Connected. Server answer: OK
+DEBUG | 2023-03-15 20:43:31,514 | client.py | Process started
+INFO | 2023-03-15 20:43:33,878 | client.py | Client created, Account: 234
+DEBUG | 2023-03-15 20:43:33,878 | client.py | Presence created 234
+DEBUG | 2023-03-15 20:43:33,878 | client.py | Called function create_presence with params ((<__main__.Client object at 0x0000029FAD3ED390>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-15 20:43:34,386 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x0000029FAD3ED390>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:43:34,386 | client.py | Connected. Server answer: OK
+DEBUG | 2023-03-15 20:43:34,386 | client.py | Process started
+INFO | 2023-03-15 20:43:37,083 | client.py | Client created, Account: 345
+DEBUG | 2023-03-15 20:43:37,083 | client.py | Presence created 345
+DEBUG | 2023-03-15 20:43:37,099 | client.py | Called function create_presence with params ((<__main__.Client object at 0x000001EEE3DFD390>,), {}). From module __main__. From function client.main(). 
+DEBUG | 2023-03-15 20:43:37,584 | client.py | Called function answer_handler with params ((<__main__.Client object at 0x000001EEE3DFD390>, {'response': 200}), {}). From module __main__. From function client.main(). 
+INFO | 2023-03-15 20:43:37,584 | client.py | Connected. Server answer: OK
+DEBUG | 2023-03-15 20:43:37,584 | client.py | Process started
+INFO | 2023-03-15 20:43:48,594 | client.py | Message dict created: {'action': 'msg', 'from': '345', 'to': '123', 'time': 1678902228.5945091, 'msg txt': '123'}
+INFO | 2023-03-15 20:43:48,594 | client.py | Sending message to 123
+INFO | 2023-03-15 20:43:48,719 | client.py | Message from 345: 123
+INFO | 2023-03-15 20:43:58,117 | client.py | Message dict created: {'action': 'msg', 'from': '234', 'to': '345', 'time': 1678902238.117033, 'msg txt': '345'}
+INFO | 2023-03-15 20:43:58,117 | client.py | Sending message to 345
+INFO | 2023-03-15 20:43:58,366 | client.py | Message from 234: 345
