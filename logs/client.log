@@ -1,0 +1,31 @@
+2023-03-23 15:32:51,731 DEBUG decors.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-03-23 15:32:53,572 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: 123
+2023-03-23 15:32:53,573 DEBUG decors.py Была вызвана функция create_presence c параметрами ('123',) , {}. Вызов из модуля __main__
+2023-03-23 15:32:53,573 DEBUG client.py Сформировано presence сообщение для пользователя 123
+2023-03-23 15:32:53,573 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 51005), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1679574773.5739367, 'user': {'account_name': '123'}}) , {}. Вызов из модуля common.utils
+2023-03-23 15:32:53,576 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 51005), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:32:54,098 DEBUG decors.py Была вызвана функция process_response_ans c параметрами ({'response': 200},) , {}. Вызов из модуля __main__
+2023-03-23 15:32:54,098 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-03-23 15:32:54,099 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-03-23 15:32:54,100 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 51005), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:32:54,100 DEBUG client.py Запущены процессы
+2023-03-23 15:33:02,449 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': '123', 'to': '12', 'time': 1679574782.4491084, 'mess_text': '12'}
+2023-03-23 15:33:02,450 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 51005), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': '123', 'to': '12', 'time': 1679574782.4491084, 'mess_text': '12'}) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:02,450 INFO client.py Отправлено сообщение для пользователя 12
+2023-03-23 15:33:07,615 DEBUG decors.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-03-23 15:33:11,108 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: 12
+2023-03-23 15:33:11,109 DEBUG decors.py Была вызвана функция create_presence c параметрами ('12',) , {}. Вызов из модуля __main__
+2023-03-23 15:33:11,109 DEBUG client.py Сформировано presence сообщение для пользователя 12
+2023-03-23 15:33:11,110 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=292, family=2, type=1, proto=0, laddr=('127.0.0.1', 51006), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1679574791.1097145, 'user': {'account_name': '12'}}) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:11,110 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=292, family=2, type=1, proto=0, laddr=('127.0.0.1', 51006), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:11,129 DEBUG decors.py Была вызвана функция process_response_ans c параметрами ({'response': 200},) , {}. Вызов из модуля __main__
+2023-03-23 15:33:11,129 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-03-23 15:33:11,129 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-03-23 15:33:11,130 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=292, family=2, type=1, proto=0, laddr=('127.0.0.1', 51006), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:11,130 DEBUG client.py Запущены процессы
+2023-03-23 15:33:16,461 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': '12', 'to': '123', 'time': 1679574796.4619613, 'mess_text': '123'}
+2023-03-23 15:33:16,461 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=292, family=2, type=1, proto=0, laddr=('127.0.0.1', 51006), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': '12', 'to': '123', 'time': 1679574796.4619613, 'mess_text': '123'}) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:16,461 INFO client.py Отправлено сообщение для пользователя 123
+2023-03-23 15:33:16,730 INFO client.py Получено сообщение от пользователя 12:
+123
+2023-03-23 15:33:16,730 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 51005), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
