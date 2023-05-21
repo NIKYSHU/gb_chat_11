@@ -1,0 +1,21 @@
+2023-03-23 15:32:45,558 DEBUG decors.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-03-23 15:32:45,587 INFO server.py Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2023-03-23 15:32:53,573 INFO server.py Установлено соединение с ПК ('127.0.0.1', 51005)
+2023-03-23 15:32:54,080 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=840, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51005)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:32:54,083 DEBUG server.py Разбор сообщения от клиента : {'action': 'presence', 'time': 1679574773.5739367, 'user': {'account_name': '123'}}
+2023-03-23 15:32:54,098 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=840, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51005)>, {'response': 200}) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:02,724 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=840, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51005)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:02,724 DEBUG server.py Разбор сообщения от клиента : {'action': 'message', 'from': '123', 'to': '12', 'time': 1679574782.4491084, 'mess_text': '12'}
+2023-03-23 15:33:02,724 ERROR server.py Пользователь 12 не зарегистрирован на сервере, отправка сообщения невозможна.
+2023-03-23 15:33:11,109 INFO server.py Установлено соединение с ПК ('127.0.0.1', 51006)
+2023-03-23 15:33:11,110 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=860, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51006)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:11,110 DEBUG server.py Разбор сообщения от клиента : {'action': 'presence', 'time': 1679574791.1097145, 'user': {'account_name': '12'}}
+2023-03-23 15:33:11,128 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=860, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51006)>, {'response': 200}) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:16,729 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=860, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51006)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:16,729 DEBUG server.py Разбор сообщения от клиента : {'action': 'message', 'from': '12', 'to': '123', 'time': 1679574796.4619613, 'mess_text': '123'}
+2023-03-23 15:33:16,729 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=840, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51005)>, {'action': 'message', 'from': '12', 'to': '123', 'time': 1679574796.4619613, 'mess_text': '123'}) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:16,730 INFO server.py Отправлено сообщение пользователю 123 от пользователя 12.
+2023-03-23 15:33:26,421 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=840, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51005)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:26,421 INFO server.py Клиент ('127.0.0.1', 51005) отключился от сервера.
+2023-03-23 15:33:28,973 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=860, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51006)>,) , {}. Вызов из модуля common.utils
+2023-03-23 15:33:28,973 INFO server.py Клиент ('127.0.0.1', 51006) отключился от сервера.
