@@ -1,0 +1,40 @@
+2023-03-28 19:50:31,325 DEBUG decos.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-03-28 19:50:34,119 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: 123
+2023-03-28 19:50:34,120 DEBUG decos.py Была вызвана функция create_presence c параметрами ('123',) , {}. Вызов из модуля __main__
+2023-03-28 19:50:34,120 DEBUG client.py Сформировано presence сообщение для пользователя 123
+2023-03-28 19:50:34,120 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=404, family=2, type=1, proto=0, laddr=('127.0.0.1', 50276), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1680022234.1203222, 'user': {'account_name': '123'}}) , {}. Вызов из модуля common.utils
+2023-03-28 19:50:34,122 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=404, family=2, type=1, proto=0, laddr=('127.0.0.1', 50276), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:50:34,652 DEBUG decos.py Была вызвана функция process_response_ans c параметрами ({'response': 200},) , {}. Вызов из модуля __main__
+2023-03-28 19:50:34,653 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-03-28 19:50:34,653 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-03-28 19:51:33,989 DEBUG decos.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-03-28 19:51:40,418 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: 123
+2023-03-28 19:51:40,418 DEBUG decos.py Была вызвана функция create_presence c параметрами ('123',) , {}. Вызов из модуля __main__
+2023-03-28 19:51:40,419 DEBUG client.py Сформировано presence сообщение для пользователя 123
+2023-03-28 19:51:40,419 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=380, family=2, type=1, proto=0, laddr=('127.0.0.1', 50285), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1680022300.419939, 'user': {'account_name': '123'}}) , {}. Вызов из модуля common.utils
+2023-03-28 19:51:40,419 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=380, family=2, type=1, proto=0, laddr=('127.0.0.1', 50285), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:31,608 DEBUG decos.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-03-28 19:52:35,313 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: 13
+2023-03-28 19:52:35,314 DEBUG decos.py Была вызвана функция create_presence c параметрами ('13',) , {}. Вызов из модуля __main__
+2023-03-28 19:52:35,314 DEBUG client.py Сформировано presence сообщение для пользователя 13
+2023-03-28 19:52:35,314 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1680022355.3143437, 'user': {'account_name': '13'}}) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:35,314 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:35,337 DEBUG decos.py Была вызвана функция process_response_ans c параметрами ({'response': 200},) , {}. Вызов из модуля __main__
+2023-03-28 19:52:35,337 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-03-28 19:52:35,337 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-03-28 19:52:35,382 DEBUG client.py Запрос списка известных пользователей 13
+2023-03-28 19:52:35,382 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1680022355.3825421, 'account_name': '13'}) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:35,382 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:35,856 DEBUG client.py Запрос контакт листа для пользователся 13
+2023-03-28 19:52:35,856 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1680022355.856399, 'user': '13'}
+2023-03-28 19:52:35,856 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1680022355.856399, 'user': '13'}) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:35,856 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:36,353 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2023-03-28 19:52:36,355 DEBUG client.py Запущены процессы
+2023-03-28 19:52:37,356 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:39,357 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:41,372 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:43,387 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:45,393 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:47,395 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=412, family=2, type=1, proto=0, laddr=('127.0.0.1', 50289), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-28 19:52:47,395 CRITICAL client.py Потеряно соединение с сервером.
