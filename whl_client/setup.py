@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name="client_chat69",
-      version="0.1.1",
+      version="0.0.1",
       description="Client 'Async chat' application",
       author="nikyshu",
       author_email="nikyshu@mail.ru",
